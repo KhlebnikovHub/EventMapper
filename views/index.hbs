@@ -1,0 +1,74 @@
+<div class="helloUser">
+  <div class="npAll">
+    {{#if name}}
+    <div class="namePhoto row">
+      <div class="helloUser-hello s6">
+      <h1>Добро пожаловать,<br>{{name}}!</h1>
+    </div>
+    <div>
+    <img src="{{img}}" class="photoUser">
+    </div>
+    </div>
+    {{#if auth}}
+    {{else}}
+    <div class="alert col s12">
+      <h5><strong>Внимание!</strong> Вы зарегистрированы в системе, ожидайте подтверждения регистрации
+        администратором.</h5>
+    </div>
+    {{/if}}
+  </div>
+
+  {{else}}
+  <div class="alert col s12">
+    <h5><strong>Внимание!</strong> Для работы в системе необходимо пройти <a href="/user/signIn">авторизацию в
+        Google</a> </h5>
+  </div>
+  {{/if}}
+</div>
+
+{{#if name}}
+{{#if auth}}
+<div class="heading">
+  
+  <h2 style="font: oblique small-caps 700 48px cursive;" class="heading__title">Мои предстоящие события</h2>
+  
+</div>
+<div class="cards">
+  {{#each futureEvents}}
+
+  <div class="card card-3">
+    <a href="/event/one/{{this.id}}/"><h5 class="card__title">{{this.name}}</a></h5>
+    <br>
+    <h7 class="card__title">{{this.description}}</h7>
+    <h8 style="color: rgb(10, 94, 94); font-style: oblique">Дата: {{this.date}}</h8>
+  </div>
+  {{/each}}
+</div>
+
+<div class="heading">
+  
+  <h2 style="font: oblique small-caps 700 48px cursive;"class="heading__title">Мои прошедшие события</h2>
+  
+</div>
+<div class="cards">
+  {{#each lastEvents}}
+
+  <div class="card card-3">
+    <h5 class="card__title">{{this.name}}</h5>
+    <br>
+    <h7 class="card__title">{{this.description}}</h7>
+    <h8 style="color: rgb(10, 94, 94); font-style: oblique">Дата: {{this.date}}</h8>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
+{{/if }}
+
+   
+
+
+
+  
+
+<script defer src="/js/admin/index.js"></script>
+

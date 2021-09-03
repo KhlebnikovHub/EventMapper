@@ -1,0 +1,41 @@
+
+
+<div id="navBar">
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">EventMapper</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        {{#if name}}
+        <li class="nav-li"><a href="/">Мои события</a></li>
+        <li class="nav-li"><a href="/event/map">События на карте</a></li>
+        <li><a href="/place/my">Мои места</a></li>
+        <li><a class="not">|</a></li>
+        <li><a class="exit" href="/user/logOut">Выйти</a></li>
+        
+        {{else}} 
+        <li><a class="exit" href="/user/signIn">Войти</a></li>
+        {{/if}}
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+ 
+        <li class="tab"><a href="/admin/users">Пользователи</a></li>
+        <li class="tab"><a href="/event/last">Прошедшие события</a></li>
+        <li class="tab"><a href="/event/future">Предстоящие события</a></li>
+        <li class="tab"><a href="/event/create">Создать событие</a></li>
+        <li class="tab"><a href="/place/create">Создать место</a></li>
+        <li class="tab"><a href="/photo/random">Рандомные фото</a></li>
+       
+      </ul>
+    </div>
+    
+  </nav>
+
+</div>
+
+
+
+
+

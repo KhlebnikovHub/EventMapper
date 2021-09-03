@@ -1,0 +1,19 @@
+ <div style="display: flex; justify-content: center; margin-top: 20px;" data-id="{{oneEvent.id}}">
+ <div class="card card-4" style="width: 70%; height: 750px;">
+    <a href="/event/one/{{oneEvent.id}}/"><h5 class="card__title">{{oneEvent.name}}</a></h5>
+    <div style="display: flex; flex-direction: column;">
+    <h5 class="card__title">Описание: <br></h5><p>{{oneEvent.description}}</p>
+    <h5 class="card__title">Фото:
+    </div>
+    <br>
+    
+    <h8 style="color: rgb(10, 94, 94); font-style: oblique">Дата: {{oneEvent.date}}</h8>
+    <div style="display: flex; flex-direction: row; justify-content: flex-end;"><i id="delete" style="font-size: 18px;" class="material-icons">Удалить</i></div>
+  </div>
+  
+</div>
+
+
+
+
+<script defer src="/js/admin/oneevent.js"></script>

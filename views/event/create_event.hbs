@@ -1,0 +1,50 @@
+<div class="superplace_main2">
+
+<div class="hero-unit">
+    
+    <div class="container" style="margin-left: -50px;">
+      
+      <div id="YMapsID2"><p class="header">Начните вводить название места:</p>
+<input type="text" id="suggest2"></div>
+    </div>
+    <div class='place_info'></div>
+  </div>
+
+
+
+
+
+<div class='place_main2'>
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s10">
+        <input placeholder="Название события" id="event_name" type="text" class="validate">
+        <label for="first_name">Название события</label>
+      </div>
+      <div class="input-field col s10">
+        <input id="date" type="datetime-local" class="validate">
+      </div>
+    </div>
+
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="description" class="materialize-textarea" style="height: 300px;"
+              name="description"></textarea>
+            <label for="description">Описание события</label>
+          </div>
+        </div>
+        <h7>Вы выбрали место: <h8 id="selectedPlace"></h8> </h7>
+        
+    </div>
+         <button class="btn modal-trigger" id = "addbutton" style="margin-top: 20px; width: 400px; height: 50px;">Создать новое событие</button>
+
+
+</div>
+
+
+
+  </div>
+
+    <script defer src="/js/admin/create_event.js"></script>
