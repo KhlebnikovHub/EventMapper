@@ -113,5 +113,25 @@ router.route('/create')
     }
   })
 
+  router.route('/map/period')
+  .get(async (req, res) => {
+    try {
+      res.render('event/map_period')
+    } catch (error) {
+      console.log(error);
+      return res.sendStatus(500).end();
+    }
+  })
+  .post(async (req, res) => {
+    try {
+    console.log(req.body);  
+      return res.sendStatus(200).end();
+
+    } catch (error) {
+      console.log(error);
+      return res.sendStatus(500).end();
+    }
+  })
+
 
 module.exports = router;

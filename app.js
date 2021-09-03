@@ -24,11 +24,8 @@ const app = express();
 
 const userRouter = require('./routes/user');
 const indexRouter = require('./routes/index');
-const clientsRouter = require('./routes/clients');
-const ordersRouter = require('./routes/orders');
 const placeRouter = require('./routes/place');
 const eventRouter = require('./routes/event');
-const adminRouter = require('./routes/admin');
 
 
 passport.serializeUser((user, done) => done(null, user))
@@ -88,12 +85,9 @@ app.use(async (req, res, next) => {
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use(checkUser);
-
 app.use('/place', placeRouter);
 app.use('/event', eventRouter);
-app.use('/clients', clientsRouter);
-app.use('/orders', ordersRouter);
-app.use('/admin', adminRouter);
+
 
 
 
