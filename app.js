@@ -19,7 +19,7 @@ const GoogleStrategy = require('passport-google-oauth')
 
   const { checkUser } = require('./middlewares/checkUser');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 800;
 const app = express();
 
 const userRouter = require('./routes/user');
